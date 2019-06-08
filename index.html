@@ -53,9 +53,12 @@ function getLuckyNumber(){
 function genLottoHTML(){
     var numbers = getLuckyNumber();
     var lottoHTML = '';
-    lottoHTML += '<div class="numset"><span class="number">';
-    lottoHTML += numbers.join('</span> <span class="number">');
-    lottoHTML += '</span></div>';
+    for (var i=0; i<5; i++) {
+        var numbers = getLuckyNumber();
+        lottoHTML += '<div class="numset"><span class="number">';
+        lottoHTML += numbers.join('</span> <span class="number">');
+        lottoHTML += '</span></div>';
+    }
     LOTTO.innerHTML = lottoHTML;
 }    
 </script>
